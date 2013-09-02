@@ -1,0 +1,31 @@
+// Self-clear floats 
+	.group:after{
+		content:".";
+		display:block;
+		height:0px;
+		clear:both;
+		visibility:hidden;
+	}
+	* html .group{ /* IE6 */
+		height:1%;
+	}
+	*:first-child+html .group{/* IE7 */
+		min-height:1px;
+	}
+
+
+// PIE
+	.pie() {
+		behavior: url(styles/PIE.htc);
+	}
+
+
+// sprite
+
+
+
+// Misc
+	.offscreen {
+		position: absolute;
+		left: -1000em;
+	}
