@@ -11,13 +11,78 @@
 	}
 
 
-// To fix IE6 && IE7 stupid default style
+// To fix IE7 stupid default style
 	html{	
 		*overflow-y:scroll;
 		*overflow-x:visible;
-		_overflow-x:hidden;
 	}
 
 
 // Global start
-	
+	body {
+		background-color: #fff;
+		font-family: arial;
+	}
+
+
+// header start
+	#header {
+		position: relative;
+		height: 130px;
+
+		a {
+			.size(100%, 30px);
+			display: block;
+			color: #57585A;
+			text-align: center;
+			font-size: 9px;
+			line-height: 30px;
+		}
+	}
+	#logo {
+		position: absolute;
+		top: 0;
+		left: 130/960*100%;
+		margin: 0;
+	}
+	nav {
+		height: 86px;
+		border-bottom: 1px solid #808184;
+
+		ul {
+			margin: 0 auto;
+			padding: 44px 0 0 130/960*100%;
+			width: 510/960*100%;
+		}
+
+		li {
+			float: left;
+			width: 25%;
+		}
+	}
+	#lang {
+		margin: 0 90/960*100% 0 0;
+
+		li {
+			float: right;
+			margin-left: 15px;
+			list-style: none;
+		}
+	}
+
+
+// footer start
+	#footer {
+		height: 136px;
+		background-color: #29B572;
+		
+		h3 {
+			margin: 0;
+			padding-top: 35px;
+		}
+		a {
+			.size(66px, 46px);
+			display: block;
+			margin: 0 auto;
+		}
+	}

@@ -1,13 +1,10 @@
 // Self-clear floats 
 	.group:after{
-		content:".";
 		display:block;
-		height:0px;
-		clear:both;
 		visibility:hidden;
-	}
-	* html .group{ /* IE6 */
-		height:1%;
+		clear:both;
+		height:0px;
+		content:".";
 	}
 	*:first-child+html .group{/* IE7 */
 		min-height:1px;
@@ -28,4 +25,9 @@
 	.offscreen {
 		position: absolute;
 		left: -1000em;
+	}
+
+	.container {
+		.center-block();
+		width: 960px;
 	}
