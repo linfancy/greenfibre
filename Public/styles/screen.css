@@ -1,40 +1,3 @@
-/*!
- * Preboot v2
- *
- * Open sourced under MIT license by @mdo.
- * Some variables and mixins from Bootstrap (Apache 2 license).
- */
-.group:after {
-  display: block;
-  visibility: hidden;
-  clear: both;
-  height: 0px;
-  content: ".";
-}
-*:first-child + html .group {
-  /* IE7 */
-
-  min-height: 1px;
-}
-.sprite {
-  display: block;
-  text-indent: -9999px;
-  background: url(../images/sprite.png) no-repeat;
-}
-.offscreen {
-  position: absolute;
-  left: -1000em;
-}
-.container {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  min-width: 960px;
-}
-.title {
-  font-size: 21px;
-}
 /*! normalize.css v1.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -506,6 +469,56 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/*!
+ * Preboot v2
+ *
+ * Open sourced under MIT license by @mdo.
+ * Some variables and mixins from Bootstrap (Apache 2 license).
+ */
+.group:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0px;
+  content: ".";
+}
+*:first-child + html .group {
+  /* IE7 */
+
+  min-height: 1px;
+}
+.sprite {
+  display: block;
+  background: url(../images/sprite.png) no-repeat;
+  text-indent: -9999px;
+}
+.offscreen {
+  position: absolute;
+  left: -1000em;
+}
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 960px;
+  width: 100%;
+}
+.title {
+  font-size: 21px;
+}
+.button {
+  border: 0;
+  background-position: -655px 0;
+}
+.button:hover,
+.button:active {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
 a:link,
 a:visited {
   text-decoration: none;
@@ -924,4 +937,136 @@ nav li {
   margin: 20px 77px 0 0;
   border: 1px solid #bab4af;
   color: #00a650;
+}
+#product-banner {
+  margin-bottom: 85px;
+  height: 319px;
+  background-color: #f1f1f2;
+}
+#product-banner .container {
+  position: relative;
+  width: 960px;
+}
+#product-banner ul {
+  margin: 0;
+  padding: 0;
+}
+#product-banner ul li {
+  position: absolute;
+  list-style: none;
+}
+#product-banner ol {
+  display: none;
+}
+#product-banner input {
+  width: 65px;
+  height: 319px;
+  position: absolute;
+  top: 0;
+  right: 1px;
+}
+#product-intro .title {
+  margin: 0 0 34px;
+  color: #221e1f;
+  text-align: center;
+  font-weight: 400;
+}
+#product-intro p {
+  margin: 0 auto 19px;
+  width: 48.95833333333333%;
+  color: #a7a9ac;
+  text-align: justify;
+  line-height: 21px;
+}
+#product-intro img {
+  display: block;
+  margin: 0 auto 102px;
+}
+#show {
+  background-color: #f1f1f2;
+}
+#show .container {
+  padding: 67px 0 130px 97px;
+  min-width: 863px;
+  width: 763px;
+}
+#show .container > img {
+  float: left;
+}
+#show h2 {
+  color: #221e1f;
+  font-size: 16px;
+}
+#show p {
+  margin: -3px 0 60px;
+  width: 355px;
+  color: #a7a9ac;
+  font-size: 12px;
+  line-height: 18px;
+}
+#show-list {
+  width: 350px;
+  height: 280px;
+  position: relative;
+  float: right;
+}
+#show-list ol,
+#show-list ul {
+  margin: 0;
+  padding: 0;
+}
+#show-list li {
+  float: left;
+  list-style: none;
+}
+#show-list ol > li {
+  position: absolute;
+  width: 280px;
+}
+#show-list img {
+  margin-left: 7px;
+  cursor: pointer;
+}
+#show-list input {
+  width: 78px;
+  height: 280px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#footer-nav ul {
+  margin: 50px auto 68px;
+  padding: 0;
+  width: 264px;
+}
+#footer-nav li {
+  float: left;
+  margin: 0 21px;
+  list-style: none;
+}
+#footer-nav .sprite {
+  width: 46px;
+  height: 46px;
+}
+#footer-nav p {
+  margin: 0 auto 90px;
+  width: 220px;
+  color: #808284;
+  text-align: justify;
+  font-size: 12px;
+}
+.nav-garden-min {
+  background-position: 0 -454px;
+}
+.nav-table-min {
+  background-position: -52px -454px;
+}
+.nav-pet-min {
+  background-position: -105px -454px;
+}
+#footer-nav .icon-mail-min {
+  width: 37px;
+  height: 25px;
+  margin: 0 auto 15px;
+  background-position: -168px -464px;
 }

@@ -11,22 +11,17 @@
 	}
 
 
-// PIE
-	.pie() {
-		behavior: url(styles/PIE.htc);
-	}
-
-
 // sprite
 	.sprite {
 		display: block;
-		text-indent: -9999px;
 		background: url(../images/sprite.png) no-repeat;
+		text-indent: -9999px;
 	}
 
 // color
 	@green: #29B572;
 	@grey: #58595b;
+	@black: #221e1f;
 
 
 // Misc
@@ -37,10 +32,20 @@
 
 	.container {
 		.center-block();
-		width: 100%;
 		min-width: 960px;
+		width: 100%;
 	}
 
 	.title {
 		font-size: 21px;
+	}
+
+	.button {
+		border: 0;
+		background-position: -655px 0;
+
+		&:hover, &:active {
+			.opacity(.7);
+			.transition(opacity .4s);
+		}
 	}
