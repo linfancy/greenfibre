@@ -6,7 +6,7 @@
 		text-decoration: underline;
 	}
 
-	input {
+	input, textarea {
 		outline: 0;
 	}
 
@@ -21,22 +21,31 @@
 // Global start
 	body {
 		background-color: #fff;
-		font-family: arial;
+		font: 13px/23px Arial,sans-serif;
+	}
+	img {
+		max-width: 100%;
 	}
 
 
 // header start
 	#header {
 		position: relative;
-		height: 130px;
+		height: 135px;
 
 		a {
 			.size(100%, 30px);
 			display: block;
-			color: #57585A;
+			color: @grey;
 			text-align: center;
-			font-size: 9px;
+			font-size: 12px;
 			line-height: 30px;
+
+			&:hover, &:active {
+				.transition(color .4s);
+				color: #2ab673;
+				text-decoration: none;
+			}
 		}
 	}
 	#logo {
@@ -51,17 +60,17 @@
 
 		ul {
 			margin: 0 auto;
-			padding: 44px 0 0 130/960*100%;
+			padding: 47px 0 0 88/960*100%;
 			width: 510/960*100%;
 		}
 
 		li {
 			float: left;
-			width: 25%;
+			width: 24.5%;
 		}
 	}
 	#lang {
-		margin: 0 90/960*100% 0 0;
+		margin: 0 56/960*100% 0 0;
 
 		li {
 			float: right;
@@ -74,7 +83,7 @@
 // footer start
 	#footer {
 		height: 136px;
-		background-color: #29B572;
+		background-color: @green;
 		
 		h3 {
 			margin: 0;

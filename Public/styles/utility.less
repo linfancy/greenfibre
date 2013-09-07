@@ -18,7 +18,15 @@
 
 
 // sprite
+	.sprite {
+		display: block;
+		text-indent: -9999px;
+		background: url(../images/sprite.png) no-repeat;
+	}
 
+// color
+	@green: #29B572;
+	@grey: #58595b;
 
 
 // Misc
@@ -29,5 +37,10 @@
 
 	.container {
 		.center-block();
-		width: 960px;
+		width: 100%;
+		min-width: 960px;
+	}
+
+	.title {
+		font-size: 21px;
 	}

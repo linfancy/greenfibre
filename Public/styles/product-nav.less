@@ -1,0 +1,51 @@
+// product-nav start
+	#product-nav {
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		> ul {
+			.center-block();
+			width: 960px;
+		}
+
+		li {list-style: none;}
+		> ul > li {
+			.size(319px, 469px);
+			float: left;
+			overflow: hidden;
+			cursor: pointer;
+		}
+
+		
+		h3 {
+			font-size: 12px;
+			text-align: center;
+			margin-bottom: 153px;
+		}
+		.sprite {
+			.size(159px, 159px);
+			margin: 115px (320-159)/2px 20px;
+		}
+		a {
+			.size(320px, 469px);
+			display: block;
+			background-image: url(../images/product-hover.jpg);
+		}
+	}
+	.nav-garden {background-position: 0 0;}
+	.nav-table {background-position: -320px 0;}
+	.nav-pet {background-position: -320*2px 0;}
+
+// to fix footer
+	.p {
+		background-color: @green;
+
+		.container {
+			background-color: #fff;
+		}
+
+		#footer .container {
+			background-color: @green;
+		}
+	}
