@@ -519,6 +519,9 @@ table {
   -o-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
+.header-fix {
+  padding-top: 135px;
+}
 a:link,
 a:visited {
   text-decoration: none;
@@ -543,8 +546,10 @@ img {
   max-width: 100%;
 }
 #header {
-  position: relative;
+  position: fixed;
+  background-color: #fff;
   height: 135px;
+  z-index: 9;
 }
 #header a {
   width: 100%;
@@ -670,7 +675,7 @@ nav li {
 }
 #welcome {
   padding-top: 68px;
-  height: 398px;
+  height: 533px;
   background-color: #29b572;
 }
 #welcome h2 {
@@ -892,13 +897,13 @@ nav li {
   border-radius: 2px;
 }
 #quote h2 {
-  top: 42px;
+  top: 177px;
   height: 46px;
   text-align: center;
   line-height: 46px;
 }
 #quote section {
-  top: 105px;
+  top: 240px;
   height: 366px;
 }
 #quote ul {
