@@ -30,12 +30,12 @@
 	<section id="product-banner">
 		<div class="container">
 			<h2 class="offscreen">Banner</h2>
-			<ul>
+			<ul class="items">
 				<li><img src="images/bn1.jpg" alt="Garden's banner" width="894" height="319"></li>
 				<li><img src="images/bn2.jpg" alt="Garden's banner" width="894" height="319"></li>
 				<li><img src="images/bn3.jpg" alt="Garden's banner" width="894" height="319"></li>
 			</ul>
-			<ol>
+			<ol class="nums">
 				<li>1</li>
 				<li>2</li>
 				<li>3</li>
@@ -56,16 +56,16 @@
 		<div class="container group">
 			<h2>HORTICULTURAL PRODUCTS</h2>
 			<p>Our products are derived from the nature, meanwhile, developing in the nature and searching beauty from the nature.  </p>
-			<img src="images/show1.jpg" alt="" width="416" height="278">
+			<img src="images/show1.jpg" alt="" width="416" height="278" id="show-win">
 
 			<div id="show-list">
 				<ol>
 					<li>
 						<ul>
 							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
+							<li><img src="images/intro1.jpg" alt="" width="133" height="89"></li>
 							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
-							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
-							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
+							<li><img src="images/intro1.jpg" alt="" width="133" height="89"></li>
 							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
 							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
 						</ul>
@@ -73,11 +73,11 @@
 					<li>
 						<ul>
 							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
+							<li><img src="images/intro1.jpg" alt="" width="133" height="89"></li>
 							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
+							<li><img src="images/intro1.jpg" alt="" width="133" height="89"></li>
 							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
-							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
-							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
-							<li><img src="images/show1.jpg" alt="" width="133" height="89"></li>
+							<li><img src="images/intro1.jpg" alt="" width="133" height="89"></li>
 						</ul>
 					</li>
 				</ol>
@@ -114,7 +114,18 @@
 	<script src="scripts/jquery.components.min.js"></script>
 	<script>
 		$(document).ready(function () {
+			var num = 0;
+
 			$('#product-banner').promo();
+			$('#show-list').showpic('#show-win');
+
+
+			$('#show-list input').click(function () {
+				$uls = $('#show-list ul');
+				l = $uls.size();
+				$uls.filter(':visible').hide()
+					.end().eq(num++ % l).show();
+			});
 		});
 	</script>
 </body>
