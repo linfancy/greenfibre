@@ -542,6 +542,9 @@ body {
   background-color: #fff;
   font: 13px/23px Arial, sans-serif;
 }
+[lang|="zh"] body {
+  font: 14px/23px "Microsoft Yahei", sans-serif;
+}
 img {
   max-width: 100%;
 }
@@ -648,6 +651,7 @@ nav li {
 #products h3 {
   margin-top: 18px;
   font-size: 12px;
+  font-weight: 400;
 }
 .icon-garden {
   background-position: 0 0;
@@ -765,7 +769,8 @@ nav li {
   margin-bottom: 30px;
 }
 #slogan p {
-  margin-bottom: 77px;
+  margin: 0 auto 77px;
+  width: 450px;
 }
 #product-nav ul {
   margin: 0;
@@ -869,6 +874,12 @@ nav li {
   text-align: center;
   font-size: 12px;
 }
+[lang|="zh"] #contact p.first {
+  text-align: center;
+  height: 115px;
+  line-height: 115px;
+  padding: 0;
+}
 .icon-address {
   background-position: -287px -380px;
 }
@@ -904,7 +915,7 @@ nav li {
 }
 #quote section {
   top: 240px;
-  height: 366px;
+  padding: 20px 0 25px;
 }
 #quote ul {
   float: left;
@@ -942,6 +953,10 @@ nav li {
   margin: 20px 77px 0 0;
   border: 1px solid #bab4af;
   color: #00a650;
+}
+[lang|="zh"] #quote input,
+[lang|="zh"] #quote textarea {
+  margin-bottom: 2px;
 }
 #product-banner {
   margin-bottom: 85px;
