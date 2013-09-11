@@ -1,0 +1,91 @@
+<include file="Public:header" />
+<include file="Public:column" />
+        <div class="span9">
+        <volist name="result" id="vo">
+          <div class="row-fluid">
+            <div class="span4">
+              <h4>{$vo.name}的意见信</h4>
+              <p>电话：{$vo.tel}</p>
+              <p>邮件：{$vo.email}</p>
+              <p>用户ip：{$vo.userip}</p>
+              <p>地址：{$vo.address}</p>
+              <p>内容：{$vo.msg}</p>
+              <p>发送时间：{$vo.send_date}</p>
+              <p><input type="hidden"value="{$vo.quote_id}" class="quote_id"><a class="btn" href="" data-toggle="modal" data-target="#confirm_dialog">删除 &raquo;</a></p>
+            </div><!--/span-->
+            
+          </div><!--/row-->
+        </volist>
+        </div><!--/span-->
+      </div><!--/row--> 
+
+      <hr>
+
+      <div class="modal fade" id="confirm_dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">确认操作</h4>
+            </div>
+             <div class="modal-body">
+              <p>本操作不可恢复，确定删除？</p>
+              </div>                
+            <div class="modal-footer">
+              <input type="hidden" id="deleteRoleId" value="">
+                <a href="#" class="btn btn-danger" id="my_deleteRole">确认</a>
+            </div>
+      </div>
+    </div>
+  </div>  
+
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+      <script src="__JS__/jquery.min.js"></script>
+  <script src="__JS__/holder.js"></script>
+  <script src="__JS__/bootstrap.min.js"></script>
+  <script src="__JS__/download_jq.js"></script>
+  <script src="__JS__/cms.js"></script>
+  <script type="text/javascript">
+  /**
+  *点击角色删除按钮
+  */
+  $('.btn').live('click',function(){
+    var block_id=$(this).siblings('.quote_id').val();
+    $('#deleteRoleId').val(block_id);
+  });
+  /**
+  *点击确定删除按钮
+  */
+  $('#my_deleteRole').click(function(){
+    var quote_id=$('#deleteRoleId').val();
+    var url = '{:U("Admin/quote")}';
+    $.ajax({
+      type:'post',
+      data:{
+        quote_id:quote_id,
+      },
+      async:false,
+      url:'{:U("Event/delQuote")}',
+      success:function(json){
+        $('.close').trigger('click');
+        window.location.href=url;
+      },
+      error:function(data,status,e){
+        alert(e);
+      }
+    });
+  }); 
+
+    </script>
+
+  </body>
+</html>

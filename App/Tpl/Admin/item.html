@@ -1,0 +1,35 @@
+<include file="Public:header" />
+<include file="Public:column" />
+        <div class="span9">
+        <volist name="item" id="co">
+          <div class="row-fluid">
+            <div class="span4">
+              <h1>{$co.title}</h1>
+              <h3>{$co.line1_title}&nbsp{$co.line1_title_en}</h3>
+              <p>{$co.line1_text}<br>{$co.line1_text_en}</p>
+              <p><a class="btn" href="{:U('Admin/edit')}/type/{$co.product_type}">详细 &raquo;</a></p>
+            </div><!--/span-->
+            
+          </div><!--/row-->
+        </volist>
+        
+        </div><!--/span-->
+      </div><!--/row--> 
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+      <script src="__JS__/jquery.min.js"></script>
+    <script src="__JS__/bootstrap.min.js"></script>
+
+  </body>
+</html>

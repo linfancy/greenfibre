@@ -1,0 +1,65 @@
+<include file="Public:index_header" />
+	<section id="quote" class="container header-fix">
+		<h2>Get Quotes </h2>
+		<section>
+			<ul>
+				<li><label for="q-name">Name</label></li>
+				<li><input type="text" id="q-name"></li>
+				<li><label for="q-add">Address</label></li>
+				<li><input type="text" id="q-add"></li>
+				<li><label for="q-tel">Phone</label></li>
+				<li><input type="text" id="q-tel"></li>
+				<li><label for="q-mail">E-mail</label></li>
+				<li><input type="text" id="q-mail"></li>
+				<li><label for="q-msg">Leave a message</label></li>
+				<li><textarea name="" id="q-msg" cols="30" rows="10"></textarea></li>
+			</ul>
+			<p>We value our customers and are committed to bringing exquisite designs at great prices to our valuable customers. Please send us your inquiry and we will get back to you very soon.</p>
+			<input type="submit" value="Send Message" id="send_message">
+			<p style="color:red" id="error_tip"></p>
+		</section>
+		<img src="__IMG__/quote-bg.jpg" alt="留言背景" width="100%"></section>
+	<!-- /#quote.container -->
+
+<include file="Public:index_footer" />
+<script type="text/javascript" src="__JS__/validation.js"></script>
+<script type="text/javascript">
+$('#send_message').click(function(){
+	var q_name = $('#q-name').val();
+	var q_add = $('#q-add').val();
+	var q_tel = $('#q-tel').val();
+	var q_mail = $('#q-mail').val();
+	var q_msg = $('#q-msg').val();
+	if(isNotNull(q_name)&&isNotNull(q_add)&&isNotNull(q_tel)&&isNotNull(q_mail)&&isNotNull(q_msg)){
+		if(isValidEmail(q_mail)){
+			if(!isValidPhone(q_tel)){
+				$('#error_tip').html('电话格式错误');
+			}else{
+				$('#error_tip').html('');
+				$(this).val('sending...');
+				$.ajax({
+					type:'post',
+					url:'{:U("Index/doAdvice")}',
+					data:{
+						q_name:q_name,
+						q_add:q_add,
+						q_tel:q_tel,
+						q_mail:q_mail,
+						q_msg:q_msg,
+					},
+					success:
+						function(data){	
+							alert(data.info);
+							window.location.href='{:U("Index/advice")}';
+						}
+
+				});
+			}
+		}else{
+			$('#error_tip').html('邮箱格式不符合');
+		}
+	}else{
+		$('#error_tip').html('不可为空');
+	}
+})
+</script>

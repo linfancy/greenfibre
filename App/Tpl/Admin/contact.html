@@ -1,0 +1,37 @@
+<include file="Public:header" />
+<include file="Public:column" />
+        <div class="span9">
+          <div class="row-fluid">
+            <div class="span4">
+              <h2>"联系我们"页面编辑</h2>
+              <form action="{:U('Event/doContact')}" method="post">
+              <p>地址：中文：<textarea rows="5" name="address">{$result.address}</textarea>
+                英文：<textarea rows="5" name="address_en">{$result.address_en}</textarea></p>
+              <p>邮箱：<input type="text" name="email" value="{$result.email}"></p>
+              <p>电话：<input type="text" name="tel" value="{$result.tel}"></p>
+              <p><button type="submit" class="btn">提交 &raquo;</button></p>
+            </form>
+            </div><!--/span-->
+            
+          </div><!--/row-->
+        
+        </div><!--/span-->
+      </div><!--/row--> 
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="//cdnjs.bootcss.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+      <script src="__JS__/jquery.min.js"></script>
+    <script src="__JS__/bootstrap.min.js"></script>
+
+  </body>
+</html>
